@@ -1,0 +1,51 @@
+<h1 class="has-text-centered">Git Users</h1>
+<br>
+<!-- <div class="container" id="root"></div> -->
+<div class="columns is-mobile is-centered">
+  <table class="table is-bordered is-striped is-narrow is-hoverable has-text-centered">
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Profile
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Details
+      </th>
+      <th>
+        Company
+      </th>
+    </tr>
+    <tr *ngFor="let user of userList; let i=index">
+      <td>
+        {{user.id}}
+      </td>
+      <td>
+        <figure class="image is-64x64">
+          <img class="is-rounded" src="{{user.avatar_url}}" alt="">
+        </figure>
+      </td>
+      <td>
+        {{user.login}}
+      </td>
+      <td>
+        {{user.type}}
+      </td>
+      <td>
+        <a href="{{user.url}}" target="_blank">details</a>
+      </td>
+      <td>
+        <a href="{{user.organizations_url}}">org</a>
+      </td>
+
+    </tr>
+  </table>
+
+</div>
